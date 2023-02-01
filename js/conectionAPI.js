@@ -1,11 +1,11 @@
 async function listVideos() {
-    const connection = await fetch('https://my-json-server.typicode.com/brunnorch/backendRequests/videos');
+    const connection = await fetch('https://my-json-server.typicode.com/brunnorch/requestsJS/videos');
     const conversion = await connection.json();
     return conversion;
 }
 
 async function addVideo(title, describle, url, image) {
-    const connection = await fetch('https://my-json-server.typicode.com/brunnorch/backendRequests/videos', {
+    const connection = await fetch('https://my-json-server.typicode.com/brunnorch/requestsJS/videos', {
         method: "POST",
         headers: {
             "content-type": "application/json"
@@ -25,7 +25,7 @@ async function addVideo(title, describle, url, image) {
 }
 
 async function searchVideo(search) {
-    const connection = await fetch(`https://my-json-server.typicode.com/brunnorch/backendRequests/videos?q=${search}`);
+    const connection = await fetch(`https://my-json-server.typicode.com/brunnorch/requestsJS/videos?q=${search}`);
     const conversion = connection.json();
     return conversion;
 }
